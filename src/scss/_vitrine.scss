@@ -1,10 +1,18 @@
+$color-primary: #4CAF50; // Verde vibrante
+$color-secondary: #8A2BE2; // Roxo elegante
+$font-color-primary: #ffffff; // Branco
+$font-color-secondary: #4A4A4A; // Cinza escuro para contraste
+$font-default: Arial, Helvetica, sans-serif;
+$font-size-default: 1.6rem;
+$font-size-nav: 1.8rem;
+
 .vitrine {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 
     &__item {
-        background-color: rgba(250, 250, 250, .2);
+        background-color: rgba(255, 255, 255, 0.8); // Fundo mais claro para contraste
         border-radius: 1rem;
         display: flex;
         flex-flow: column;
@@ -13,10 +21,11 @@
         min-height: 20rem;
         padding: 1rem;
         position: relative;
+
         &:hover {
             animation: toTop;
             animation-duration: 1s;
-            box-shadow: 0 0 2px 2px rgba(25 , 25 , 25 , .2);
+            box-shadow: 0 0 4px 2px rgba(138, 43, 226, 0.4); // Sutil destaque roxo
         }
     }
 
@@ -41,19 +50,20 @@
     }
 
     &__button {
-        box-shadow: 0 0 2px 2px rgba(0,150,255,.2);
-        background-color: $color-primary;
+        box-shadow: 0 0 2px 2px rgba(138, 43, 226, 0.3); // Roxo suave
+        background-color: $color-primary; // Verde no fundo
         border-radius: 1rem;
         border: 1px solid $color-primary;
-        color: $font-color-primary;
+        color: $font-color-primary; // Branco para contraste
         font-weight: bold;
         padding: 1rem 2rem;
         font-size: $font-size-default;
         text-decoration: none;
         align-self: center;
         margin-bottom: 2rem;
+
         &:hover {
-            box-shadow: 0 0 2px 2px $color-secondary;
+            box-shadow: 0 0 4px 2px rgba(138, 43, 226, 0.6); // Destacado no hover
         }
     }
 }
